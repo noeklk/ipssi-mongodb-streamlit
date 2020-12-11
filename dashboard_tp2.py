@@ -3,13 +3,13 @@ from pymongo import MongoClient
 import streamlit as st
 
 client = MongoClient('localhost', 4043)
-db = client.crimes
-table = db.documents
+db = client.api_fetch
+table = db.table
 
 st.write("""
 Bonjour, 
 
-bienvenue sur une représentation de crime commis par année pour chaque arme
+bienvenue sur une représenation du fetch d'une api
 """)
 
 @st.cache
